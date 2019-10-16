@@ -11,7 +11,6 @@ To launch tests:
 
 To run the application:
 ```
-./mvn clean package
 ./docker-compose build
 ./docker-compose up
 ```
