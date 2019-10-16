@@ -17,6 +17,14 @@ To run the application:
 
 The server runs on port 8888
 
+Then,
+```
+curl "http://localhost:8888/weather?start=2018-08-01T00:00:00Z&end=2018-08-04T00:00:00Z"
+```
 
+To run the application locally:
 
+- Open Intellij and go to `Run` -> `Edit configurations`
+- Add a new application configuration with main class `io.vertx.core.Launcher`
+- Add `run com.gone.with.the.wind.weather.Server -conf config/config-local.json` in program arguments
 
