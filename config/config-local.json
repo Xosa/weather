@@ -1,0 +1,7 @@
+{
+  "http.port": 7000,
+  "TEMPERATURE_HOST": "localhost",
+  "WINDSPEED_HOST": "localhost",
+  "TEMPERATURE_PORT": 8000,
+  "WINDSPEED_PORT": 8080
+}

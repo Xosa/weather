@@ -1,0 +1,7 @@
+{
+  "http.port": 8887,
+  "TEMPERATURE_HOST": "temperature",
+  "WINDSPEED_HOST": "windspeed",
+  "TEMPERATURE_PORT": 8000,
+  "WINDSPEED_PORT": 8080
+}
