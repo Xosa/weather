@@ -1,9 +1,13 @@
-FROM openjdk:8-jdk-alpine
+FROM maven:3.6.2-jdk-8
 MAINTAINER weather
 
-WORKDIR /app/
+COPY src /home/app/src
+COPY pom.xml /home/app/pom.xml
 
-COPY target/*-fat.jar ./weather-server.jar
+WORKDIR /home/app/
+
+RUN mvn -f /home/app/pom.xml clean package
+
 COPY config/*.json ./config/
 
-ENTRYPOINT ["java", "-server", "-jar", "./weather-server.jar", "-conf", "./config/config.json"]
+ENTRYPOINT ["java", "-server", "-jar", "/home/app/target/weather-1.0.0-SNAPSHOT-fat.jar", "-conf", "./config/config.json"]
